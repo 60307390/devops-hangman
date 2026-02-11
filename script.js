@@ -181,6 +181,7 @@ function guessLetter(letter) {
     
     if (!gameState.currentWord.includes(letter)) {
         gameState.wrongGuesses++;
+        document.getElementById('key-' + letter).disabled = true;
         updateHangman();
     }
     
