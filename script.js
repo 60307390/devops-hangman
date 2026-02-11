@@ -45,8 +45,10 @@ function switchTab(tabName) {
     event.target.classList.add('active');
 }
 
+const bankName = "wordBank"
+
 function loadWordBank() {
-    const stored = localStorage.getItem('wordBank');
+    const stored = localStorage.getItem(bankName);
     if (stored) {
         wordBank = JSON.parse(stored);
     } else {
@@ -57,7 +59,7 @@ function loadWordBank() {
 }
 
 function saveWordBank() {
-    localStorage.setItem('devopsWords', JSON.stringify(wordBank));
+    localStorage.setItem(bankName, JSON.stringify(wordBank));
 }
 
 function displayWordBank() {
